@@ -7,4 +7,4 @@
     authorized_key:
       user: devops
       exclusive: yes
-      key:  "{{ lookup('file', '/var/lib/ansible/local/ansible-keys/devops.keys') }}"
+      key:  "{{ lookup('file', '/var/lib/ansible/local/devops.keys') }}"
