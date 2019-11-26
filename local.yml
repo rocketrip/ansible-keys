@@ -1,0 +1,10 @@
+- name: Install public keys
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+  tasks:
+  - name: Set authorized keys taken from url
+    authorized_key:
+      user: devops
+      exclusive: yes
+      key:  "{{ lookup('file', '/var/lib/ansible/local/ansible-keys/devops.keys') }}"
